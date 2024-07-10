@@ -1,63 +1,69 @@
-import br.com.dio.desadio.Bootcamp;
-import br.com.dio.desadio.Curso;
-import br.com.dio.desadio.Dev;
-import br.com.dio.desadio.Mentoria;
+import br.com.dio.desadio.*;
 
-import javax.swing.text.html.HTMLDocument;
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+        // Criando instâncias de Curso
         Curso curso1 = new Curso();
-        curso1.setTitulo("curso java");
-        curso1.setDescricao("descrição curso java");
-        curso1.setCargahoraria(8);
-
+        curso1.setTitulo("Curso Java");
+        curso1.setDescricao("Descrição curso Java");
+        curso1.setCargaHoraria(8);
 
         Curso curso2 = new Curso();
-        curso2.setTitulo("curso js");
-        curso2.setDescricao("descrição curso js");
-        curso2.setCargahoraria(4);
+        curso2.setTitulo("Curso JS");
+        curso2.setDescricao("Descrição curso JS");
+        curso2.setCargaHoraria(4);
 
-
+        // Criando instância de Mentoria
         Mentoria mentoria = new Mentoria();
-        mentoria.setTitulo("mentoria em java");
-        mentoria.setDescricao("descrição mentoria java");
+        mentoria.setTitulo("Mentoria em Java");
+        mentoria.setDescricao("Descrição mentoria Java");
         mentoria.setData(LocalDate.now());
 
-        //+System.out.println(curso1);
-        //System.out.println(curso2);//
-       // System.out.println(mentoria);//
+        // Criando instância de Workshop
+        Workshop workshop = new Workshop();
+        workshop.setTitulo("Workshop sobre Docker");
+        workshop.setDescricao("Descrição workshop Docker");
+        workshop.setDuracao(5);
+
+        // Criando instância de Palestra
+        Palestra palestra = new Palestra();
+        palestra.setTitulo("Palestra sobre Kubernetes");
+        palestra.setDescricao("Descrição palestra Kubernetes");
+        palestra.setDuracao(3);
+
+        // Criando instância de Bootcamp
         Bootcamp bootcamp = new Bootcamp();
-        bootcamp.setNome("Bootcamp Java deceloper");
-        bootcamp.setDescricao("Descrição Bootcamp Java developer");
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
+        bootcamp.getConteudos().add(workshop);
+        bootcamp.getConteudos().add(palestra);
 
+        // Criando e inscrevendo Devs
         Dev devRomario = new Dev();
         devRomario.setNome("Romario");
         devRomario.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscrito" +devRomario.getConteudoInscrito());
+        System.out.println("Conteúdos Inscritos Romario: " + devRomario.getConteudoInscrito());
 
-        devRomario.proguedir();
-        devRomario.proguedir();
-
-        System.out.println("Conteudos concluido" +devRomario.getConteudosConcluidos());
-        System.out.println("Xp" +devRomario.calcularXp());
-        System.out.println("----------");
+        devRomario.progredir();
+        devRomario.progredir();
+        System.out.println("Conteúdos Concluídos Romario: " + devRomario.getConteudosConcluidos());
+        System.out.println("XP: " + devRomario.calcularXp());
 
         Dev devMarcos = new Dev();
         devMarcos.setNome("Marcos");
         devMarcos.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscrito" +devMarcos.getConteudoInscrito());
-        devMarcos.proguedir();
-        devMarcos.proguedir();
-        devMarcos.proguedir();
+        System.out.println("Conteúdos Inscritos Marcos: " + devMarcos.getConteudoInscrito());
 
-        System.out.println("Conteudos concluidos" +devMarcos.getConteudosConcluidos());
-        System.out.println("Xp" +devMarcos.calcularXp());
-        System.out.println("----");
+        devMarcos.progredir();
+        devMarcos.progredir();
+        devMarcos.progredir();
+        System.out.println("Conteúdos Concluídos Marcos: " + devMarcos.getConteudosConcluidos());
+        System.out.println("XP: " + devMarcos.calcularXp());
     }
-
 }
+

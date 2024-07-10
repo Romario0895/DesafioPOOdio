@@ -26,4 +26,7 @@ public abstract class conteudo {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public void setCargaHoraria(int i) {
+    }
 }
