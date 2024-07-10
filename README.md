@@ -157,15 +157,5 @@ Foi adicionada a classe `Workshop` para representar workshops como um tipo de co
 - **Método**:
   - `calcularXp()`: Implementação que calcula o XP com base na duração.
 
-**Código Adicionado:**
-```java
-public class Workshop extends Conteudo {
-    private int duracao; // Duração em horas
-
-    @Override
-    public double calcularXp() {
-        return XP_PADRAO + (duracao * 2);
-    }
-
 
 
