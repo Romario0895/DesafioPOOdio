@@ -1,5 +1,29 @@
+import br.com.dio.desadio.Curso;
+import br.com.dio.desadio.Mentoria;
+
+import javax.swing.text.html.HTMLDocument;
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Curso curso1 = new Curso();
+        curso1.setTitulo("curso java");
+        curso1.setDesxricao("descrição curso java");
+        curso1.setCargahoraria(8);
+
+
+        Curso curso2 = new Curso();
+        curso2.setTitulo("curso js");
+        curso2.setDesxricao("descrição curso js");
+        curso2.setCargahoraria(4);
+
+
+        Mentoria mentoria = new Mentoria();
+        mentoria.setTitulo("mentoria em java");
+        mentoria.setDwscricao("descrição mentoria java");
+        mentoria.setData(LocalDate.now());
+        System.out.println(curso1);
+        System.out.println(curso2);
+        System.out.println(mentoria);
     }
 }
