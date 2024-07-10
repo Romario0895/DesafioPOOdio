@@ -144,7 +144,28 @@ Se possível:<br>
 ⭐️  Star o projeto<br>
 🐛 Encontrar e relatar issues<br>
 </p>
+## Modificações Realizadas
 
+### 1. Adição de Novas Classes de Conteúdo
+
+#### **1.1. `Workshop`**
+Foi adicionada a classe `Workshop` para representar workshops como um tipo de conteúdo adicional no Bootcamp.
+
+- **Atributos**:
+  - `duracao`: Duração do workshop em horas.
+  
+- **Método**:
+  - `calcularXp()`: Implementação que calcula o XP com base na duração.
+
+**Código Adicionado:**
+```java
+public class Workshop extends Conteudo {
+    private int duracao; // Duração em horas
+
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO + (duracao * 2);
+    }
 
 
 
