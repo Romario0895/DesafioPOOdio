@@ -1,28 +1,15 @@
 package br.com.dio.desadio;
 
-public class Curso {
-    private String titulo;
-   private String descricao;
+public class Curso extends conteudo {
+
     private int cargahoraria;
+    public double calcularXp() {
+        return XP_PADRAO + cargahoraria;
+    }
+
 
     public Curso() {
 
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDesxricao() {
-        return descricao;
-    }
-
-    public void setDesxricao(String desxricao) {
-        this.descricao = descricao;
     }
 
     public int getCargahoraria() {
@@ -36,8 +23,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargahoraria=" + cargahoraria +
                 '}';
     }
